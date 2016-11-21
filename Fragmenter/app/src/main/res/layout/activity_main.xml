@@ -11,7 +11,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:weightSum="1"
-    tools:context="com.ebookfrenzy.fragmenter.MainActivity">
+    tools:context="com.ebookfrenzy.fragmenter.MainActivity"
+    android:background="@color/colorAccent">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -39,8 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="Index"
-            android:text="Home"
-            />
+            android:text="Home" />
 
 
     </LinearLayout>

@@ -1,6 +1,7 @@
 package com.ebookfrenzy.fragmenter;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
@@ -12,7 +13,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -54,19 +59,44 @@ public class Selectedshop extends Fragment
         if(val == 4)
             example = R.drawable.example4;
 
-        LinearLayout rl = (LinearLayout) view.findViewById(R.id.LinearLayout_selectedshop);
-        ImageButton iv = new ImageButton(getContext());
-        iv.setImageDrawable(getContext().getDrawable(example));
+
+
+        ImageView shopPic = (ImageView) view.findViewById(R.id.ShopPicture);
+        TextView shopPicOverlay = (TextView) view.findViewById(R.id.ShopPictureOverlay);
+        TextView InfoBox = (TextView) view.findViewById(R.id.InfoBox);
+
+
+        shopPic.setImageDrawable(getContext().getDrawable(example));
+
+        shopPicOverlay.setText("Måske bare fjern tekst?. " + val);
+        shopPicOverlay.setTextColor(Color.parseColor("#400D12"));
+
         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, 500);
-        lp.setMargins(0, 30, 0, 0);
 
-        iv.setLayoutParams(lp);
+        shopPic.setLayoutParams(lp);
+
+        InfoBox.setTextColor(Color.parseColor("#CDFFFF"));
 
 
 
-        Toast.makeText(getContext(), "" + bundle.getInt("shopID"), Toast.LENGTH_SHORT).show();
+        /// DO LOGIC FOR GETTING DATA FROM HTTP
 
-        rl.addView(iv);
+        // USE IT TO POPULATE InfoBox
+// Below is an example of how it should look!
+        InfoBox.setText("Sådan finder du os\n" +
+                "\n" +
+                "Baresso Coffee A/S\n" +
+                "Vimmelskaftet 43, 4. sal\n" +
+                "DK-1161 København K\n" +
+                "\n" +
+                "CVR: 10 01 16 63\n" +
+                "\n" +
+                "Telefon: +45 33 93 98 28\n" +
+                "\n" +
+                "info@baresso.com (for generel info/kontakt)\n" +
+                "coffeeclub@baresso.com (for alle henvendelser \n" +
+                "vedrørende Baresso Coffee Club)");
+
 
         return view;
     }
