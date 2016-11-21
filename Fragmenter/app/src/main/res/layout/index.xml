@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.23"
+        android:id="@+id/IndexScrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/LinearLayout_Index">
+
+            <!--<ImageButton-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="107dp"-->
+                <!--app:srcCompat="?android:attr/selectableItemBackground"-->
+                <!--android:id="@+id/imageButton2"-->
+                <!--android:onClick="SelectedShop" />-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="107dp"-->
+                <!--app:srcCompat="?android:attr/selectableItemBackground"-->
+                <!--android:id="@+id/imageButton17"-->
+                <!--android:onClick="SelectedShop" />-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="107dp"-->
+                <!--app:srcCompat="?android:attr/selectableItemBackground"-->
+                <!--android:id="@+id/imageButton16"-->
+                <!--android:onClick="SelectedShop" />-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="107dp"-->
+                <!--app:srcCompat="?android:attr/selectableItemBackground"-->
+                <!--android:id="@+id/imageButton15"-->
+                <!--android:onClick="SelectedShop" />-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="107dp"-->
+                <!--app:srcCompat="?android:attr/selectableItemBackground"-->
+                <!--android:id="@+id/imageButton18"-->
+                <!--android:onClick="SelectedShop" />-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="107dp"-->
+                <!--app:srcCompat="?android:attr/selectableItemBackground"-->
+                <!--android:id="@+id/imageButton14"-->
+                <!--android:onClick="SelectedShop" />-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="107dp"-->
+                <!--app:srcCompat="?android:attr/selectableItemBackground"-->
+                <!--android:id="@+id/imageButton13"-->
+                <!--android:onClick="SelectedShop" />-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="107dp"-->
+                <!--app:srcCompat="?android:attr/selectableItemBackground"-->
+                <!--android:id="@+id/imageButton12"-->
+                <!--android:onClick="SelectedShop" />-->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
