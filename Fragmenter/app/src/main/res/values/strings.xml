@@ -4,6 +4,19 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string-array name="StoreImage_keys">
+        <item>barreso</item>
+        <item>barreso2</item>
+    </string-array>
+
+
+    <integer-array name="StoreImage_values">
+        <item>2130837588</item>
+        <item>2130837589</item>
+        <item>2130837590</item>
+        <item>2130837591</item>
+    </integer-array>
+
 
 
 </resources>

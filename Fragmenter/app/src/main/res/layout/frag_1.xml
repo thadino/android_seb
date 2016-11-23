@@ -8,6 +8,14 @@
         android:text="MENU 1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/menu1TextView"/>
+        android:id="@+id/menu1TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+
+    <Button
+        android:onClick="goback"
+        android:background="@drawable/backarrow"
+        android:layout_width="48dp"
+        android:id="@+id/selectedShopback"
+        android:layout_height="48dp" />
 
 </LinearLayout>

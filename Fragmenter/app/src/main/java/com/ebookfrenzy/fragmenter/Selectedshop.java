@@ -1,7 +1,9 @@
 package com.ebookfrenzy.fragmenter;
 
 import android.app.Activity;
+import android.app.WallpaperManager;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
@@ -9,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -35,20 +38,20 @@ public class Selectedshop extends Fragment
 
     }
 
-
+View View;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
 
         final View view = inflater.inflate(R.layout.selectedshop, container, false);
-
+  View = view;
         Bundle bundle = getArguments();
 
-        Integer val = bundle.getInt("shopID");
+        Integer val = bundle.getInt("shopIDs");
 
         Integer example = R.drawable.example1;
 
-
+        Toast.makeText(getContext(), "ID _ " + val, Toast.LENGTH_SHORT).show();
 
         if(val == 1)
             example = R.drawable.example1;
@@ -65,8 +68,9 @@ public class Selectedshop extends Fragment
         TextView shopPicOverlay = (TextView) view.findViewById(R.id.ShopPictureOverlay);
         TextView InfoBox = (TextView) view.findViewById(R.id.InfoBox);
 
+//        Drawable image  = getResources().getDrawable(WallPaperoneFragment.imagefield.get(position));
 
-        shopPic.setImageDrawable(getContext().getDrawable(example));
+        shopPic.setImageDrawable(getContext().getDrawable(val));
 
         shopPicOverlay.setText("Måske bare fjern tekst?. " + val);
         shopPicOverlay.setTextColor(Color.parseColor("#400D12"));
@@ -97,22 +101,43 @@ public class Selectedshop extends Fragment
                 "coffeeclub@baresso.com (for alle henvendelser \n" +
                 "vedrørende Baresso Coffee Club)");
 
-
+        addListenerOnButton();
         return view;
     }
 
+    public void addListenerOnButton() {
+
+        Button button = (Button) View.findViewById(R.id.selectedShopback);
+
+
+        button.setOnClickListener( new View.OnClickListener() {
+
+
+            public void onClick(View v) {
+
+
+
+                getFragmentManager().popBackStack();
+
+
+
+
+            }
+        });
+
+    }
 
 
     public static Selectedshop newInstance(Integer shopID)
     {
-
-
         Bundle args = new Bundle();
-        args.putInt("shopID", shopID);
+        args.putInt("shopIDs", shopID);
         Selectedshop fragment = new Selectedshop();
         fragment.setArguments(args);
         return fragment;
     }
+
+
 
 
 
